@@ -1,0 +1,9 @@
+provisioner "local-exec" {
+  command = <<EOH
+sudo apt-get update
+sudo apt-get install python3-pip
+cd bond_touch/flask_server
+pip3 install --user -r requirements.txt
+python3 app.py
+EOH
+}
